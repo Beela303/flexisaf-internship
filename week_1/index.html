@@ -8,30 +8,45 @@
     <style>
         body {
             font-family: sans-serif; 
-            max-width: 800px; 
+
             margin: 20px auto; 
             padding: 0 10px; 
+
+            max-width: 800px; 
         }
+
         .container { 
             display: flex; 
             flex-direction: column; 
             gap: 10px; 
         }
+
         .output-box { 
-            border: 1px solid #ccc; 
-            padding: 10px; 
-            min-height: 50px; 
             background-color: #f9f9f9; 
+
+            min-height: 50px; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+
             white-space: pre; 
         }
         button { 
             padding: 8px 12px; 
+
             cursor: pointer; 
         }
+
+        button:hover {
+            padding: 12px 8px;
+
+            transition: 1s;
+        }
+
         .buttons-container { 
             display: flex; 
-            gap: 10px; 
             flex-wrap: wrap; 
+
+            gap: 10px; 
         }
     </style>
 </head>
@@ -59,6 +74,7 @@
         <div id="output" class="output-box"></div>
     </div>
     
+    <p>Nabila Abubakar</p>
     <script src="script.js"></script>
 </body>
 </html>
