@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods</title>
+
+    <style>
+        body {
+            font-family: sans-serif; 
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 0 10px; 
+        }
+        .container { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; 
+        }
+        .output-box { 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            min-height: 50px; 
+            background-color: #f9f9f9; 
+            white-space: pre; 
+        }
+        button { 
+            padding: 8px 12px; 
+            cursor: pointer; 
+        }
+        .buttons-container { 
+            display: flex; 
+            gap: 10px; 
+            flex-wrap: wrap; 
+        }
+    </style>
+</head>
+<body>    
+    <h1>JavaScript Array Methods Implementation</h1>
+    <p>Initial Array: <strong><span id="initial-array-display"></span></strong></p>
+    
+    <div class="container">
+        <h2>Methods</h2>
+        <div class="buttons-container">
+            <button onclick="useMap()">map() (Double Values)</button>
+            <button onclick="useFilter()">filter() (> 7)</button>
+            <button onclick="useForEach()">forEach() (Log to Console)</button>
+            <button onclick="usePush()">push() (Add 1024)</button>
+            <button onclick="usePop()">pop() (Remove Last)</button>
+            <button onclick="useReduce()">reduce() (Returns a single value)</button>
+            <button onclick="useSplice()">splice() (Adds/Removes elements at specific index)</button>
+            <button onclick="useSlice()">slice() (Returns a shallow copy of an array)</button>
+            <button onclick="useIncludes()">includes() (If the array includes 49)</button>
+            <button onclick="useIndexOf()">indexOf() (Returns the Index of 8)</button>
+            <button onclick="resetArray()">Reset Array</button>
+        </div>
+        
+        <h3>Output:</h3>
+        <div id="output" class="output-box"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

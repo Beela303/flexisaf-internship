@@ -1,0 +1,202 @@
+:root {
+  --text-color: #fff7f3;
+  --dark-color: #1A1A1D;
+  --dark-color-2: #1e1e1e;
+
+  --main: #801375;
+  --main2: #3f0938;
+
+  --main-color: #6A1E55;
+  --pastel-color: #A64D79;
+  --pastel-color-1: #9d7f84;
+  --pastel-color-2: #FAD0C4;
+
+  --background-color: #000; // #160214;
+
+  --main-transparent: #e3160214;
+  --transparent: #0000008e;
+  --transparent2: #00000080;
+
+  --white: #fafafa;
+  --black: #000;
+
+  --link: #f4d8d0; //#50c7c7
+  --hover: #c388a3;
+
+  --border: grey;
+  --border-main: 2px solid #FAD0C4; //#64055b
+
+  --pretty-blue: #3f729b;
+  --light-purple: #e48fdb;
+
+  --transition: 2s ease;
+  --transform: translateY(-5px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+}
+
+body {
+  color: var(--text-color) !important;
+  background-color: var(--dark-color-2) !important;
+
+  outline: none;
+  overflow-x: hidden;
+
+  margin: 10%;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--hover);
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+
+  text-align: center;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+  //font-family: var(--title);
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw)
+}
+
+@media (min-width:1200px) {
+  h1 {
+    font-size: 2.5rem
+  }
+}
+
+h2 {
+  font-size: calc(1.325rem + .9vw)
+}
+
+@media (min-width:1200px) {
+  h2 {
+    font-size: 2rem
+  }
+}
+
+h3 {
+  font-size: calc(1.3rem + .6vw)
+}
+
+@media (min-width:1200px) {
+  h3 {
+    font-size: 1.75rem
+  }
+}
+
+h4 {
+  font-size: calc(1.275rem + .3vw)
+}
+
+@media (min-width:1200px) {
+  h4 {
+    font-size: 1.5rem
+  }
+}
+
+h5 {
+  font-size: 1.25rem
+}
+
+h6 {
+  font-size: 1rem
+}
+
+:target {
+  color: rgb(183, 0, 255);
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+___________________________________________________
+h1 #intro {
+  margin-bottom: 5%;
+}
+
+#project-call {
+  text-align: left !important;
+  margin-top: 5% !important;
+  margin-bottom: 3%;
+}
+
+#project-call span {
+  color: var(--light-purple);
+}
+
+#projects{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+a .project p{
+  margin-top: 20px;
+}
+
+.project {
+  height: 100px;
+
+  color: var(--text-color);
+  background: var(--dark-color);
+  
+  border: 1px solid var(--light-purple);
+  border-radius: 20px;
+  
+  font-size: 2rem;
+
+  transition: 2s;
+}
+
+.project:hover {
+  color: var(--dark-color);
+  background: var(--light-purple);
+}
+
+@media screen and (max-width: 500px) {
+  #projects {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project {
+    height: 70px;
+    font-size: 1.5rem;
+  }
+}
