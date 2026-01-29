@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Methods</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+</head>
+<body>    
+    <a id="back-to-home" href="../index.html">
+        <div>
+            <p><span>< </span>Back to Home</p>
+        </div>
+    </a>
+
+    <h1>JavaScript Array Methods Implementation</h1>
+    <p>Initial Array: <strong><span id="initial-array-display"></span></strong></p>
+    
+    <div class="container">
+        <h2>Methods</h2>
+        <div class="buttons-container">
+            <button onclick="useMap()">map() (Double Values)</button>
+            <button onclick="useFilter()">filter() (> 7)</button>
+            <button onclick="useForEach()">forEach() (Log to Console)</button>
+            <button onclick="usePush()">push() (Add 1024)</button>
+            <button onclick="usePop()">pop() (Remove Last)</button>
+            <button onclick="useReduce()">reduce() (Returns a single value)</button>
+            <button onclick="useSplice()">splice() (Adds/Removes elements at specific index)</button>
+            <button onclick="useSlice()">slice() (Returns a shallow copy of an array)</button>
+            <button onclick="useIncludes()">includes() (If the array includes 49)</button>
+            <button onclick="useIndexOf()">indexOf() (Returns the Index of 8)</button>
+            <button onclick="resetArray()">Reset Array</button>
+        </div>
+        
+        <h3>Output:</h3>
+        <div id="output" class="output-box"></div>
+    </div>
+    
+    <p>Nabila Abubakar</p>
+    <script src="script.js"></script>
+</body>
+</html>

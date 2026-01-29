@@ -86,7 +86,6 @@ h6 {
   line-height: 1.2;
 
   font-weight: 500;
-  //font-family: var(--title);
 }
 
 h1 {
@@ -146,7 +145,6 @@ button {
   outline: none;
 }
 
-___________________________________________________
 h1 #intro {
   margin-bottom: 5%;
 }

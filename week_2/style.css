@@ -1,0 +1,90 @@
+:root {
+  --text-color: #fff7f3;
+  --dark-color: #1A1A1D;
+  --dark-color-2: #1e1e1e;
+
+  --pastel-color: #A64D79;
+  --pastel-color-1: #9d7f84;
+  --pastel-color-2: #FAD0C4;
+
+  --transition: 2s ease;
+  --transform: translateY(-5px);
+}
+
+body {
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+
+    color: var(--text-color);
+    background-color: #090008;
+
+    margin: 20px auto; 
+    padding: 0 10px; 
+
+    max-width: 800px; 
+}
+
+a {
+    text-decoration: none;
+}
+
+#back-to-home {
+    color: var(--text-color);
+    
+    font-size: 1.5rem;
+}
+
+#back-to-home div {
+    background-color: var(--pastel-color);
+
+    width: 30%;
+
+    transition: var(--transition);
+}
+
+#back-to-home div:hover {
+    width: 40%;
+}
+
+.container { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+button { 
+    color: var(--text-color);
+    background: var(--dark-color);
+    border: 1px solid var(--pastel-color);
+
+    padding: 8px 12px; 
+
+    cursor: pointer; 
+}
+
+button:hover {
+    color: var(--dark-color);
+    background: var(--text-color);
+    padding: 12px 8px;
+
+    transition: var(--transition);
+}
+
+.buttons-container { 
+    display: flex; 
+    flex-wrap: wrap; 
+
+    gap: 10px; 
+}
+
+.output-box { 
+    color: var(--text-color); 
+    background-color: var(--dark-color); 
+
+    min-height: 50px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+
+    white-space: pre; 
+}
