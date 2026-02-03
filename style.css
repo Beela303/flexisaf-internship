@@ -11,7 +11,7 @@
   --pastel-color-1: #9d7f84;
   --pastel-color-2: #FAD0C4;
 
-  --background-color: #000; // #160214;
+  --background-color: #000; /* #160214*/
 
   --main-transparent: #e3160214;
   --transparent: #0000008e;
@@ -20,11 +20,11 @@
   --white: #fafafa;
   --black: #000;
 
-  --link: #f4d8d0; //#50c7c7
+  --link: #f4d8d0; /*#50c7c7*/
   --hover: #c388a3;
 
   --border: grey;
-  --border-main: 2px solid #FAD0C4; //#64055b
+  --border-main: 2px solid #FAD0C4; /*#64055b */
 
   --pretty-blue: #3f729b;
   --light-purple: #e48fdb;
