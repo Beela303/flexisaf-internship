@@ -188,6 +188,13 @@ a .project p{
   background: var(--light-purple);
 }
 
+#github-link {
+  margin: 50px 0;
+
+  font-size: 2rem;
+  text-align: left;
+}
+
 @media screen and (max-width: 500px) {
   #projects {
     grid-template-columns: 1fr 1fr;
