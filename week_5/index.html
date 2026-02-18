@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Node.js & NPM</title>
+
+    <style>
+        body {
+            font-family: sans-serif; 
+
+            margin: 20px auto; 
+            padding: 0 10px; 
+
+            max-width: 800px; 
+        }
+
+        code {
+            color: #fff;
+            background-color: #000;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html"><--Back</a>
+    <h1>Understanding Node.js</h1>
+
+    <h2>Node.js enables you to build server-side applications, manage files and databases, create APIs, and much more using the same language.</h2>
+    
+    <p>It is an open-source, cross-platform JavaScript runtime environment that allows 
+        developers to run JavaScript code outside of a web browser. 
+        NPM (Node Package Manager) is the default package manager for Node.js, 
+        providing a vast registry of reusable code packages and command-line tools 
+        to manage them efficiently.</p>
+
+
+    <p>Node.js is commonly used for server-side and back-end development, including:
+    <br>
+    - Web servers and real-time applications,
+    <br>
+    - REST or GraphQL APIs for communication between front-end and back-end,
+    <br>
+    - Database management (MongoDB, PostgreSQL, MySQL, etc.)
+    <br>
+    - Automation and server-side scripts,
+    <br>
+    - Microservices and scalable applications, thanks to its asynchronous, event-driven architecture.
+    </p>
+
+    <p>Node.js allows you to use JavaScript for server-side programming, 
+        creating APIs, real-time applications, and command-line tools.</p>
+
+    <p><b>Runtime Environment:</b> Node.js uses Google Chrome's high-performance V8 JavaScript engine to compile JavaScript code into machine code, enabling fast execution.</p>
+    <p><b>Asynchronous & Non-blocking:</b> It uses an event-driven, non-blocking I/O model, allowing it to handle thousands of concurrent connections efficiently within a single process, without waiting for one task to complete before starting another.</p>
+    <p><b>Full-Stack Development:</b> Node.js enables developers to use a single language (JavaScript) for both client-side and server-side development, which streamlines the entire development process. </p>
+
+    <p>To run a Node.js program, you typically save your code in a .js file (e.g., app.js) and run it from your terminal using the command node app.js. </p>
+
+    <h3>Installation</h2>
+    <p>Download the latest official nodejs from the nodejs website.</p>
+    <p>To check if it's installed run the below code in the terminal which will give the versions if installed on the system.</p>
+    <code>node -v</code>
+    <br>
+    <code>npm -v</code>
+
+    <h3>Modularity</h3>
+    <p>Key components of all robust projects in Node.js is the organization and separation of files.
+        Node.js currently supports two major module systems. Which are stated below:</p>
+
+    <h4>CommonJS (CJS) - The Classic</h4>
+    <p>This was the original and long-standing standard system in Node.js.</p>
+
+    <p><b>Syntax:</b> Uses the require() function and module.exports.
+        <br>
+    <p><b>Execution:</b> Module loading is synchronous (it stops execution until the module is fully loaded).
+        <br>
+    <p><b>Usage:</b> It's the default for files with the .js extension unless otherwise specified.</p>
+
+    <p>Example:</p>
+
+    <code>
+        // exporting module
+        <br>
+        module.exports = {
+            <br>
+            add: (a, b) => a * b
+            <br>
+        };
+         <br>
+        
+        // importing module
+        <br>
+        const { add } = require('./math');
+        <br>
+        console.log(add(5, 5));
+    </code>
+
+    <h4>ES Modules (ESM) - The Modern Standard</h4>
+    <p>ESM is the official JavaScript standard (introduced in ES6) and is now fully supported and recommended in Node.js for new projects.</p>
+
+    <p><b>Syntax:</b> Uses the import and export keywords.
+        <br>
+    <p><b>Execution:</b> Supports asynchronous loading and is generally more efficient.
+        <br>
+    <p><b>Usage:</b> Requires either the .mjs extension or setting "type": "module" in your package.json file.</p>
+
+    <code>
+    // exporting module
+    <br>
+    export const subtract = (a, b) => a - b;
+    <br>
+
+    // importing module
+    <br>
+    import { subtract } from './math.js';
+    <br>
+    console.log(subtract(10, 3));
+    </code>
+
+    <h3>The Workflow</h3>
+    <p>These functionalities will help you automate and streamline your workflow, saving time and avoiding repetitive tasks.</p>
+
+    <h4>NPM Scripts</h4>
+    <p>Automate terminal commands directly from your package.json.</p>
+    <p>For example, you can create a script to start the server:</p>
+
+    <code>
+        // package.json
+        <br>
+        "scripts": {
+            <br>
+            "start": "node server.js",
+            <br>
+            "dev": "nodemon server.js"
+            <br>
+        }
+    </code>
+
+    <p>Run the above easily using: npm run start or npm run dev.</p>
+
+    <h4>Nodemon(The Automatic Refresher)</h4>
+    <p>Nodemon is an essential development-only NPM package. It is crucual because it 
+        automatically monitors changes in source files 
+        and restarts the Node.js server every time you save.</p>
+
+        <p>Installation (as a dev dependency): <code>npm install -D nodemon</code></p>
+
+    <h4>.gitignore (Keeping GitHub Clean)</h4>
+    <p>This is an important file for maintaining a secure and clean repository.
+        <br>
+        This file gives Git instructions on which directories and files to ignore during a commit.
+        <br>
+        The two most critical items to ignore are the node_modules directory 
+        and the .env file.
+    </p>
+
+    <h4>Security Baseline</h4>
+    <p>For sensitive information that should never be committed to source control (like GitHub), 
+        environment variables are used in the .env page. These sensitive data includes 
+        API keys, database passwords, and specific configuration 
+        settings for different environments.
+
+    </p>
+
+    <p>Example of a .env page: </p>
+
+    <code>
+        DB_HOST=localhost
+        <br>
+        DB_PORT=5432
+        <br>
+        API_KEY=my_super_secret_key_12345
+        <br>
+    </code>
+
+    <h1>Understanding NPM</h1>
+    <h2>NPM is a crucial part of the Node.js ecosystem, simplifying the process of managing project dependencies. </h2>
+
+    <p><b>Package Management:</b> It helps install, share, and manage third-party packages (libraries or modules). The NPM registry is the world's largest single-language code repository, containing over a million packages that add functionality to your applications (e.g., web frameworks like Express.js).
+    <p><b>Command-Line Interface (CLI):</b> NPM provides command-line tools to interact with the registry and your project. When you install Node.js from the official website, NPM is automatically installed with it. You can verify the installation by running NPM -v in your terminal.
+    <p><b>*package.json*** **File:**</b> This file, typically at the root of a project, acts as the control panel for NPM. It keeps track of project information, the list of all dependencies, and can also define scripts for automating tasks (e.g., NPM run start`).
+    <p><b>node_modules Folder:</b> When you install a package, NPM creates a node_modules folder in your project directory to store all the downloaded packages and their associated dependencies. 
+</body>
+</html>
